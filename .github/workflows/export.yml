@@ -1,5 +1,10 @@
 name: Notion → YAML Export
 
+permissions:
+  contents: write    # erlaubt pushen in das Repo
+  actions: read      # reicht für einen normalen Workflow
+
+
 on:
   schedule:
     - cron: '0 2 * * *'        # jede Nacht um 2:00 (CEST)
@@ -9,7 +14,10 @@ jobs:
   export:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -21,10 +29,9 @@ jobs:
 
       - name: Run exporter
         env:
-          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          NOTION_API_KEY:       ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID:   ${{ secrets.NOTION_DATABASE_ID }}
         run: python notion_export.py --db-id ${{ secrets.NOTION_DATABASE_ID }} --output prompts/
-
 
       - name: Lint YAML
         run: yamllint prompts || true
@@ -34,5 +41,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add prompts/
-          git commit -m "Nightly YAML export" || echo "No changes"
+          git commit -m "Nightly YAML export" || echo "No changes to commit"
           git push
