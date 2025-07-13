@@ -23,7 +23,8 @@ jobs:
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        run: python notion_export.py --db-id ${{ secrets.NOTION_DATABASE_ID }} --output prompts/
+        run: python scripts/notion_export.py --db-id ${{ secrets.NOTION_DATABASE_ID }} --output prompts/
+
 
       - name: Lint YAML
         run: yamllint prompts || true
