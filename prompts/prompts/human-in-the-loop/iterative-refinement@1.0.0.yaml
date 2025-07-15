@@ -1,0 +1,17 @@
+name: human-in-the-loop/iterative-refinement@1.0.0
+description: Improves output through back-and-forth micro-edits guided by the user.
+tags:
+- editing
+- refinement
+- revision-loop
+template: "<system>\nBreak down long outputs into segments.\nAfter each part, ask\
+  \ for revision: \u201CShall I rephrase, shorten, or expand this?\u201D\nContinue\
+  \ based on user feedback, one section at a time.\n</system>\n<user>\nShow me your\
+  \ work in small chunks.\nLet me edit each piece before you continue \u2014 like\
+  \ a writing assistant I can interrupt.\n</user>\n"
+origin_framework:
+  name: Micro-Iteration Loop
+  source: 'Amershi, S., et al. (2014). Power to the People: The Role of Humans in
+    Interactive Machine Learning. AI Magazine, 35(4).'
+  concept: Refinement in tight feedback loops enables shared control and improved
+    alignment.

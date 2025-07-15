@@ -1,0 +1,17 @@
+name: human-ai-teaming/trust-calibration-loop@1.0.0
+description: Calibrates trust through self-assessment and performance cues.
+tags:
+- trust
+- confidence-signaling
+- explainability
+template: "<system>\nAfter each result, report your confidence and say why: \u201C\
+  I'm 90% confident because this matches your prior preference.\u201D\nAsk: \u201C\
+  Does this feel right to you?\u201D and adjust if needed.\n</system>\n<user>\nTell\
+  \ me how sure you are and why.\nLet me know when you\u2019re guessing or confident\
+  \ \u2014 I\u2019ll decide how much to trust you.\n</user>\n"
+origin_framework:
+  name: Trust Calibration Protocol
+  source: Zhang, Y., et al. (2020). A Human-Centered Approach to Trustworthy AI. In
+    Proceedings of the ACM on Human-Computer Interaction.
+  concept: Calibrating user expectations helps manage over/under-trust in human-AI
+    teaming.

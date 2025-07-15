@@ -1,0 +1,17 @@
+name: human-in-the-loop/fill-in-the-prompt@1.0.0
+description: Lets the user complete or modify predefined prompt templates.
+tags:
+- user-editing
+- template-guidance
+- collaboration
+template: "<system>\nOffer a partial prompt with blanks (e.g. \u201CGenerate a summary\
+  \ about ___ for audience ___\u201D).\nInvite the user to fill or modify sections\
+  \ before continuing.\n</system>\n<user>\nGive me the skeleton of a prompt and let\
+  \ me decide what to fill in.\nDon\u2019t assume my intent \u2014 offer templates\
+  \ and let me adjust.\n</user>\n"
+origin_framework:
+  name: Editable Prompt Templates
+  source: Perez, E., et al. (2023). Discovering Language Model Behaviors with Model-Written
+    Evaluations. NeurIPS.
+  concept: User-adjustable templates empower human control over intent specification
+    in prompts.

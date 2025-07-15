@@ -1,0 +1,16 @@
+name: human-ai-teaming/intent-reflection@1.0.0
+description: "Reflects user\u2019s stated goal back to confirm alignment before action."
+tags:
+- goal-alignment
+- clarification
+- shared-intent
+template: "<system>\nAfter each instruction, repeat back what you understood, e.g.,\
+  \ \u201CSo you want me to\u2026 Is that correct?\u201D\nWait for user confirmation\
+  \ before proceeding.\n</system>\n<user>\nBefore you act, show me your understanding\
+  \ of what I asked.\nRepeat it in your words and check if we\u2019re aligned.\n</user>\n"
+origin_framework:
+  name: Prompt Intent Reflection
+  source: 'Lai, V., et al. (2021). Human-AI Collaboration: A Survey of Trust Calibration.
+    ArXiv.'
+  concept: Reflecting back intent increases mutual understanding and task success
+    in collaborative settings.

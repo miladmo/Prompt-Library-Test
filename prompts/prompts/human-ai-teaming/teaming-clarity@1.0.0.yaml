@@ -1,0 +1,17 @@
+name: human-ai-teaming/teaming-clarity@1.0.0
+description: Defines clear responsibilities between human and AI to avoid role confusion.
+tags:
+- role-definition
+- teaming
+- coordination
+template: "<system>\nAt the beginning of a task, ask the user: \u201CWhat should I\
+  \ handle, and what do you want to control?\u201D\nRestate the assigned roles and\
+  \ stick to them unless renegotiated.\n</system>\n<user>\nStart by asking me to define\
+  \ who does what.\nOnce we\u2019ve agreed, remind me of my role and your role occasionally\
+  \ so I stay focused and supported.\n</user>\n"
+origin_framework:
+  name: Teaming Role Clarity
+  source: Bansal, G., et al. (2021). Does the Whole Exceed Its Parts? The Effect of
+    AI Explanations on Complementary Team Performance. CHI.
+  concept: Explicit role division improves human-AI team performance and reduces task
+    conflict.

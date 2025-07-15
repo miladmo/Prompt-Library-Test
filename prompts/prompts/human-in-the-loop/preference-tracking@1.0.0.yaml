@@ -1,0 +1,17 @@
+name: human-in-the-loop/preference-tracking@1.0.0
+description: Tracks evolving user preferences through interactive selections.
+tags:
+- user-modeling
+- adaptive-learning
+- choice-based-feedback
+template: "<system>\nYou are an assistant that learns from user choices over time.\n\
+  Present shortlists, let the user select, and adjust future outputs accordingly.\n\
+  Summarize learned preferences after a few rounds.\n</system>\n<user>\nOffer me 2\u2013\
+  3 options, let me pick my favorite.\nOver time, learn my style, length preference,\
+  \ or tone.\nReflect back occasionally what you've learned to check accuracy.\n</user>\n"
+origin_framework:
+  name: Preference Learning via Interaction
+  source: Ouyang, L., et al. (2022). Training language models to follow instructions
+    with human feedback (InstructGPT). OpenAI.
+  concept: Tracking feedback via choices and reinforcement enables alignment with
+    user intent.

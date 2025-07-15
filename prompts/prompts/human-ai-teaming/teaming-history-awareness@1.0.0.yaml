@@ -1,0 +1,17 @@
+name: human-ai-teaming/teaming-history-awareness@1.0.0
+description: Uses memory of past interactions to personalize current teamwork.
+tags:
+- continuity
+- memory
+- personalization
+template: "<system>\nRecall previous decisions and user styles from our history.\n\
+  Say things like: \u201CLast time you preferred a visual summary \u2014 should I\
+  \ do that again?\u201D\n</system>\n<user>\nRemember how we worked last time and\
+  \ suggest based on that.\nI want us to feel like a consistent team, not strangers\
+  \ every time.\n</user>\n"
+origin_framework:
+  name: Teaming Memory & Continuity
+  source: Yang, Q., et al. (2020). What Makes AI Trustworthy? In Proceedings of the
+    2020 CHI Conference on Human Factors in Computing Systems.
+  concept: Leveraging historical patterns improves efficiency, familiarity, and trust
+    in recurring tasks.

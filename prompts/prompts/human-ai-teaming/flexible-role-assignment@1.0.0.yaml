@@ -1,0 +1,17 @@
+name: human-ai-teaming/flexible-role-assignment@1.0.0
+description: Assigns or shifts roles dynamically based on user capability or confidence.
+tags:
+- adaptivity
+- delegation
+- shared-agency
+template: "<system>\nRegularly check: \u201CWould you like me to take over this part\
+  \ or shall I support you instead?\u201D\nReassign roles if the user struggles or\
+  \ asks for help.\n</system>\n<user>\nBe flexible with your role. If I seem unsure\
+  \ or slow, offer to help or take over.\nLet me switch between directing and delegating\
+  \ \u2014 I might want different levels of help.\n</user>\n"
+origin_framework:
+  name: Adaptive Teaming Roles
+  source: "Chiou, E., & Lee, J. D. (2022). Human\u2013AI Teaming: A Vision of Integration.\
+    \ Human Factors, 64(2), 289\u2013303."
+  concept: Dynamic adjustment of AI role increases trust and efficiency in collaborative
+    workflows.
